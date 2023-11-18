@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Open Sans', sans-serif, 'Poppins', sans-serif, 'Raleway', sans-serif;
-            background-image: url("https://media.istockphoto.com/id/1454860970/photo/4k-defocused-background.webp?b=1&s=170667a&w=0&k=20&c=y6-9A8uhyLpeNuH7WPt3o8Nc4lRqetEmvmD3po4xndk=");
+            background-image: url("https://images.unsplash.com/photo-1619252584172-a83a949b6efd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -21,29 +21,34 @@
             justify-content: center;
         }
         h1 {
-            color: BLACK; /* Set the text color to white or any other desired color */
+            color: black; /* Set the text color to black or any other desired color */
+            text-align: center;
         }
         .button-container {
             display: flex;
-            justify-content: space-around; /* Adjusts space between buttons */
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center; /* Center buttons horizontally */
+            margin-top: auto; /* Push the buttons to the bottom */
         }
 
         .button {
-            display: inline-block;
+            display: block;
+            width: 150px;
+            height: 40px;
             margin: 10px;
             border: 1px solid black;
-            padding: 10px 20px; /* Adjust padding for button size */
-            background-color: white; /* Set button background color */
-            color: black; /* Set button text color */
-            text-decoration: none; /* Remove underline for anchor elements */
-            border-radius: 10px; /* Add rounded corners */
-            transition: background-color 0.3s ease; /* Add a smooth transition effect */
-
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
             background-color: #2980b9; /* Change background color on hover */
         }
+
         .hidden-audio {
             position: absolute;
             top: -9999px;
@@ -52,14 +57,27 @@
     </style>
 </head>
 <body>
-    <audio controls autoplay loop muted class="hidden-audio">
-        <source src="Top Ten - Jeremy Blake.mp3" type="audio/mp3">
-        This browser does not support HTML5 audio
+    <audio id="clickSound">
+        <source src="clicksound.mp3" type="audio/mp3">
+        Your browser does not support HTML5 audio
     </audio>
-   
+
+    <audio controls autoplay loop class="hidden-audio">
+        <source src="Top Ten - Jeremy Blake.mp3" type="audio/mp3">
+        Your browser does not support HTML5 audio
+    </audio>
+
+    <img src="checkerboard.png" alt="checkerboard" style="width: 20%; margin: 0 auto; display: block;">
     <div class="button-container">
-        <a href="game.html" class="button">Start</a>
-        <a href="instruction.html" class="button">Instructions</a>
+        <a href="game.html" class="button" onclick="playClickSound()">Start</a>
+        <a href="instruction.html" class="button" onclick="playClickSound()">Instructions</a>
     </div>
+
+    <script>
+        function playClickSound() {
+            var audio = document.getElementById("clickSound");
+            audio.play();
+        }
+    </script>
 </body>
 </html>
