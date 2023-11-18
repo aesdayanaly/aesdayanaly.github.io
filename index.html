@@ -75,12 +75,10 @@
     </style>
 </head>
 <body>
-    <audio id="clickSound">
-        <source src="clicksound.mp3" type="audio/mp3">
-        Your browser does not support HTML5 audio
-    </audio>
+   
+    
 
-    <audio controls autoplay muted loop class="hidden-audio">
+    <audio autoplay muted loop class="hidden-audio">
         <source src="Top Ten - Jeremy Blake.mp3" type="audio/mp3">
         Your browser does not support HTML5 audio
     </audio>
@@ -89,16 +87,25 @@
         <img src="checkerboard.png" alt="checkerboard">
     </div>
     <h1> CHECKER GAME</h1>
+    <audio id="clickSound">
+        <source src="clicksound.mp3" type="audio/mpeg">
+        <source src="clicksound.ogg" type="audio/ogg">
+        Your browser does not support HTML5 audio
+    </audio>
     <div class="button-container">
-        <a href="game.html" class="button" onclick="playClickSound()">Start</a>
-        <a href="instruction.html" class="button" onclick="playClickSound()">Instructions</a>
+        <a href="game.html" class="button" id="startButton">Start</a>
+        <a href="instruction.html" class="button" id="instructionsButton">Instructions</a>
     </div>
-
+    
     <script>
+        document.getElementById("startButton").addEventListener("click", playClickSound);
+        document.getElementById("instructionsButton").addEventListener("click", playClickSound);
+    
         function playClickSound() {
             var audio = document.getElementById("clickSound");
             audio.play();
         }
     </script>
+    
 </body>
 </html>
