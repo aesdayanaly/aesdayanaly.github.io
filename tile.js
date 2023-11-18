@@ -1,4 +1,4 @@
-class tile{
+class Tile{
     constructor(x, y, size, c, sqr, p=null){
         this.x = x;
         this.y = y;
