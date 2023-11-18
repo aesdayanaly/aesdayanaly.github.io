@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200&family=Raleway:wght@100;300&display=swap" rel="stylesheet">
@@ -21,11 +21,45 @@
             justify-content: center;
         }
         h1 {
-            color: white; /* Set the text color to white or any other desired color */
+            color: BLACK; /* Set the text color to white or any other desired color */
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around; /* Adjusts space between buttons */
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            border: 1px solid black;
+            padding: 10px 20px; /* Adjust padding for button size */
+            background-color: white; /* Set button background color */
+            color: black; /* Set button text color */
+            text-decoration: none; /* Remove underline for anchor elements */
+            border-radius: 10px; /* Add rounded corners */
+            transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+        }
+
+        .button:hover {
+            background-color: #2980b9; /* Change background color on hover */
+        }
+        .hidden-audio {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
         }
     </style>
 </head>
 <body>
-    <h1>HI!</h1>
+    <audio controls autoplay loop muted class="hidden-audio">
+        <source src="Top Ten - Jeremy Blake.mp3" type="audio/mp3">
+        This browser does not support HTML5 audio
+    </audio>
+   
+    <div class="button-container">
+        <a href="game.html" class="button">Start</a>
+        <a href="instruction.html" class="button">Instructions</a>
+    </div>
 </body>
 </html>
