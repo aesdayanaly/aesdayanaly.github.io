@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Dama</title>
+    <title>Game</title>
+    <style>
+        body {
+            text-align: center;
+            cursor: grab ;
+            margin-top: 10%;
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-size: 2em;
+            color: black;
+}
+
+#clock {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+    </style>
 </head>
+
 <body>
-    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="board.js"> </script>
     <script type="text/javascript" src="piece.js"></script>
     <script type="text/javascript" src="tile.js"></script>
     <script type="text/javascript" src="ai.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script src="clock.js"></script>
+
+
+    <br>
+    <div id="clock"> <span id="timeElapsed">0 minutes and 0 seconds</span></div>
+
 </body>
+
 </html>
