@@ -7,6 +7,7 @@ imgs[2].src = 'y.png';
 imgs[3].src = 'r_super.png';
 imgs[4].src = 'y_super.png';
 
+
 const PLAYER = {P1: 1, P2: 2};
 
 const PIECE_TYPE = {
@@ -407,4 +408,3 @@ function printBoard(){
    s += "</center>";
    return s;
 }
-

@@ -75,10 +75,7 @@
     </style>
 </head>
 <body>
-   
-    
-
-    <audio autoplay muted loop class="hidden-audio">
+    <audio autoplay loop class="hidden-audio">
         <source src="Top Ten - Jeremy Blake.mp3" type="audio/mp3">
         Your browser does not support HTML5 audio
     </audio>
@@ -87,7 +84,7 @@
         <img src="checkerboard.png" alt="checkerboard">
     </div>
     <h1> CHECKER GAME</h1>
-    <audio id="clickSound">
+    <audio class="hidden-audio">
         <source src="clicksound.mp3" type="audio/mpeg">
         <source src="clicksound.ogg" type="audio/ogg">
         Your browser does not support HTML5 audio
@@ -98,18 +95,18 @@
     </div>
     
     <script>
+        var audio = document.getElementsByClassName("hidden-audio")[1]; // Use [1] to select the second element with the class "hidden-audio"
+    
         document.getElementById("startButton").addEventListener("click", playClickSound);
         document.getElementById("instructionsButton").addEventListener("click", playClickSound);
     
         function playClickSound() {
-            var audio = document.getElementById("clickSound");
             var newAudio = audio.cloneNode(); // Create a new instance of the audio element
+            newAudio.currentTime = 0; // Set the audio playback position to the beginning
             newAudio.play();
         }
     </script>
     
-    
-    
-    
+
 </body>
 </html>
