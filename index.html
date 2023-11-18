@@ -103,10 +103,12 @@
     
         function playClickSound() {
             var audio = document.getElementById("clickSound");
-            audio.currentTime = 0; // Set the audio playback position to the beginning
-            audio.play();
+            var newAudio = audio.cloneNode(); // Create a new instance of the audio element
+            newAudio.play();
         }
     </script>
+    
+    
     
     
 </body>
