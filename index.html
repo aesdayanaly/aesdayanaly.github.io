@@ -18,7 +18,7 @@
             height: 100vh;
             margin: 0;
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
+            flex-direction: column; 
             align-items: center;
             justify-content: center;
             cursor: cell;
@@ -54,12 +54,12 @@
             text-align: center;
             text-decoration: none;
             border-radius: 10px;
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for transform property */
+            transition: background-color 0.3s ease, transform 0.3s ease; 
         }
 
         .button:hover {
-            background-color: #3f160e; /* Change background color on hover */
-            transform: scale(1.1); /* Scale up by 10% on hover */
+            background-color: #3f160e; 
+            transform: scale(1.1); 
         }
 
         .hidden-audio {
@@ -80,7 +80,7 @@
         Your browser does not support HTML5 audio
     </audio>
 
-    <div class="image-container">
+    <div autoplay loop class="image-container">
         <img src="checkerboard.png" alt="checkerboard">
     </div>
     <h1> CHECKER GAME</h1>
@@ -95,14 +95,14 @@
     </div>
     
     <script>
-        var audio = document.getElementsByClassName("hidden-audio")[1]; // Use [1] to select the second element with the class "hidden-audio"
+        var audio = document.getElementsByClassName("hidden-audio")[1]; 
     
         document.getElementById("startButton").addEventListener("click", playClickSound);
         document.getElementById("instructionsButton").addEventListener("click", playClickSound);
     
         function playClickSound() {
-            var newAudio = audio.cloneNode(); // Create a new instance of the audio element
-            newAudio.currentTime = 0; // Set the audio playback position to the beginning
+            var newAudio = audio.cloneNode();
+            newAudio.currentTime = 0; 
             newAudio.play();
         }
     </script>

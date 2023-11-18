@@ -1,4 +1,4 @@
-class Tile{
+class tile{
     constructor(x, y, size, c, sqr, p=null){
         this.x = x;
         this.y = y;
@@ -6,9 +6,9 @@ class Tile{
         this.sqr = sqr;
         this.piece = p;
         if(c)
-            this.color = 'black';
+            this.color = '#fee6c1';
         else
-            this.color = 'white';
+            this.color = '#ad2f0f';
     }
 
     draw(context){

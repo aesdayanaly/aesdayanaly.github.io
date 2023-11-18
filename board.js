@@ -392,19 +392,19 @@ function printBoard(){
     s += "<center>";
     let x = 0;
     let y = false;
-   for(let i=0; i<sqr48.length*2; i++){
-        if(i % 8 == 0)
-        {
+    for(let i = 0; i < sqr48.length * 2; i++){
+        if(i % 8 == 0) {
             s += "<br>";
             y = !y;
         }
         if(i % 2 == 0){
-            if(y) s += "--";
-            s += ""+BOARD_DEF.board[sqr48[x]];
-            if(!y) s += "--";
+            // Add brown border using the style attribute
+            s += `<span style='border: 5px solid brown;'>${BOARD_DEF.board[sqr48[x]]}</span>`;
             x++;
         }
     }
-   s += "</center>";
-   return s;
+    s += "</center>";
+    return s;
 }
+
+
